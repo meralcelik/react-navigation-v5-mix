@@ -54,8 +54,8 @@ const App = () => {
     colors: {
       ...NavigationDefaultTheme.colors,
       ...PaperDefaultTheme.colors,
-      background: '#ffffff',
-      text: '#333333'
+      background: '#fff',
+      text: '#003f5c'
     }
   }
   
@@ -66,7 +66,7 @@ const App = () => {
       ...NavigationDarkTheme.colors,
       ...PaperDarkTheme.colors,
       background: '#333333',
-      text: '#ffffff'
+      text: '#fb5b5a'
     }
   }
 

@@ -2,7 +2,6 @@ import React from 'react';
 import {
   View,
   Text,
-  Button,
   TouchableOpacity,
   Dimensions,
   TextInput,
@@ -171,7 +170,7 @@ const SignInScreen = ({navigation}) => {
                       color: '#fff',
                     },
                   ]}>
-                 Kaydol
+                  Kaydol
                 </Text>
               </LinearGradient>
             </TouchableOpacity>

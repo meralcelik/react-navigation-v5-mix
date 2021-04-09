@@ -98,16 +98,16 @@ const SignInScreen = ({navigation}) => {
 
     if (data.username.length == 0 || data.password.length == 0) {
       Alert.alert(
-        'Wrong Input!',
-        'Username or password field cannot be empty.',
-        [{text: 'Okay'}],
+       ' Yanlış giriş!',
+       ' Kullanıcı adı veya şifre alanı boş olamaz.',
+        [{text: 'Evet'}],
       );
       return;
     }
 
     if (foundUser.length == 0) {
-      Alert.alert('Invalid User!', 'Username or password is incorrect.', [
-        {text: 'Okay'},
+      Alert.alert('Geçersiz Kullanıcı! ',' Kullanıcı adı veya şifre yanlış.', [
+        {text: 'Evet'},
       ]);
       return;
     }
@@ -235,7 +235,7 @@ const SignInScreen = ({navigation}) => {
                     color: '#fff',
                   },
                 ]}>
-                Sign In
+             Giriş Yap
               </Text>
             </LinearGradient>
           </TouchableOpacity>
@@ -257,7 +257,7 @@ const SignInScreen = ({navigation}) => {
                   color: '#fb5b5a',
                 },
               ]}>
-              Sign Up
+             Kayıt Ol
             </Text>
           </TouchableOpacity>
         </View>

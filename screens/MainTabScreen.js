@@ -12,7 +12,8 @@ import ProfileScreen from './ProfileScreen';
 
 const HomeStack = createStackNavigator();
 const DetailsStack = createStackNavigator();
-
+const ProfileStack = createStackNavigator();
+const ExploreStack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
 const MainTabScreen = () => (
@@ -24,7 +25,7 @@ const MainTabScreen = () => (
         name="Home"
         component={HomeStackScreen}
         options={{
-          tabBarLabel: 'Home',
+          tabBarLabel: 'Akademisyen',
           tabBarColor: '#003f5c',
           tabBarIcon: ({ color }) => (
             <Icon name="ios-home" color={color} size={26} />
@@ -35,8 +36,8 @@ const MainTabScreen = () => (
         name="Notifications"
         component={DetailsStackScreen}
         options={{
-          tabBarLabel: 'Updates',
-          tabBarColor: '#1f65ff',
+          tabBarLabel: 'Dersler',
+          tabBarColor: '#003f5c',
           tabBarIcon: ({ color }) => (
             <Icon name="ios-notifications" color={color} size={26} />
           ),
@@ -44,10 +45,10 @@ const MainTabScreen = () => (
       />
       <Tab.Screen
         name="Profile"
-        component={ProfileScreen}
+        component={ProfileStackScreen}
         options={{
-          tabBarLabel: 'Profile',
-          tabBarColor: '#694fad',
+          tabBarLabel: 'Devamsızlık',
+          tabBarColor: '#003f5c',
           tabBarIcon: ({ color }) => (
             <Icon name="ios-person" color={color} size={26} />
           ),
@@ -55,10 +56,10 @@ const MainTabScreen = () => (
       />
       <Tab.Screen
         name="Explore"
-        component={ExploreScreen}
+        component={ExploreStackScreen}
         options={{
-          tabBarLabel: 'Explore',
-          tabBarColor: '#d02860',
+          tabBarLabel: 'Ödevler',
+          tabBarColor: '#003f5c',
           tabBarIcon: ({ color }) => (
             <Icon name="ios-aperture" color={color} size={26} />
           ),
@@ -80,7 +81,7 @@ const HomeStackScreen = ({navigation}) => (
         }
     }}>
         <HomeStack.Screen name="Home" component={HomeScreen} options={{
-        title:'Ana Sayfa',
+        title:'Akademik Personel',
         headerLeft: () => (
             <Icon.Button name="ios-menu" size={25} backgroundColor="#003f5c" onPress={() => navigation.openDrawer()}></Icon.Button>
         )
@@ -91,18 +92,52 @@ const HomeStackScreen = ({navigation}) => (
 const DetailsStackScreen = ({navigation}) => (
 <DetailsStack.Navigator screenOptions={{
         headerStyle: {
-        backgroundColor: '#1f65ff',
+        backgroundColor: '#003f5c',
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
         fontWeight: 'bold'
         }
     }}>
-        <DetailsStack.Screen name="Details" component={DetailsScreen} options={{
+        <DetailsStack.Screen name="Alınan Dersler" component={DetailsScreen} options={{
         headerLeft: () => (
-            <Icon.Button name="ios-menu" size={25} backgroundColor="#1f65ff" onPress={() => navigation.openDrawer()}></Icon.Button>
+            <Icon.Button name="ios-menu" size={25} backgroundColor="#003f5c" onPress={() => navigation.openDrawer()}></Icon.Button>
         )
         }} />
 </DetailsStack.Navigator>
+);
+const ProfileStackScreen = ({navigation}) => (
+  <ProfileStack.Navigator screenOptions={{
+          headerStyle: {
+          backgroundColor: '#003f5c',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+          fontWeight: 'bold'
+          }
+      }}>
+          <ProfileStack.Screen name="Devamsızlık" component={ProfileScreen} options={{
+          headerLeft: () => (
+              <Icon.Button name="ios-menu" size={25} backgroundColor="#003f5c" onPress={() => navigation.openDrawer()}></Icon.Button>
+          )
+          }} />
+  </ProfileStack.Navigator>
+);
+const ExploreStackScreen = ({navigation}) => (
+  <ExploreStack.Navigator screenOptions={{
+          headerStyle: {
+          backgroundColor: '#003f5c',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+          fontWeight: 'bold'
+          }
+      }}>
+          <ExploreStack.Screen name="Ödevler" component={ExploreScreen} options={{
+          headerLeft: () => (
+              <Icon.Button name="ios-menu" size={25} backgroundColor="#003f5c" onPress={() => navigation.openDrawer()}></Icon.Button>
+          )
+          }} />
+  </ExploreStack.Navigator>
 );
   

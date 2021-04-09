@@ -94,7 +94,7 @@ function CustomDrawerContent(props) {
             signOut();
           }} testID="customDrawer-logout">
           <View style={styles.parentItem}>
-            <Text style={styles.title}>{'Log out'}</Text>
+            <Text style={styles.title}>{'Çıkış Yap'}</Text>
           </View>
         </TouchableOpacity>
       </View>

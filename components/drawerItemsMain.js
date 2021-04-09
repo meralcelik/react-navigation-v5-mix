@@ -32,7 +32,7 @@ export const drawerItemsMain = [
   },
   {
     key: 'Settings',
-    title: 'Settings',
+    title: 'Sosyal Yaşam',
 
     routes: [
       {nav: 'MainDrawer', routeName: 'Settings1', title: 'Settings 1'},
@@ -43,7 +43,7 @@ export const drawerItemsMain = [
   },
   {
     key: 'Home',
-    title: 'Home',
+    title: 'Aktiveteler',
     routes: [
       {nav: 'MainDrawer', routeName: 'Home', title: 'Home'},
 
@@ -54,7 +54,7 @@ export const drawerItemsMain = [
   },
   {
     key: 'Settings',
-    title: 'Settings',
+    title: 'Sosyal Medya',
     routes: [
       {nav: 'MainDrawer', routeName: 'Settings1', title: 'Settings 1'},
       {nav: 'MainDrawer', routeName: 'Settings2', title: 'Settings 2'},
@@ -64,7 +64,7 @@ export const drawerItemsMain = [
   },
   {
     key: 'Home',
-    title: 'Home',
+    title: 'Mesajlaşma',
     routes: [
       {nav: 'MainDrawer', routeName: 'Home', title: 'Home'},
 
@@ -73,35 +73,5 @@ export const drawerItemsMain = [
       {nav: 'MainDrawer', routeName: 'Settings1', title: 'Settings 1'},
     ],
   },
-  {
-    key: 'Settings',
-    title: 'Settings',
-    routes: [
-      {nav: 'MainDrawer', routeName: 'Settings1', title: 'Settings 1'},
-      {nav: 'MainDrawer', routeName: 'Settings2', title: 'Settings 2'},
-      {nav: 'MainDrawer', routeName: 'Settings1', title: 'Settings 1'},
-      {nav: 'MainDrawer', routeName: 'Settings2', title: 'Settings 2'},
-    ],
-  },
-  {
-    key: 'Home',
-    title: 'Home',
-    routes: [
-      {nav: 'MainDrawer', routeName: 'Home', title: 'Home'},
-
-      {nav: 'MainDrawer', routeName: 'Settings1', title: 'Settings 1'},
-      {nav: 'MainDrawer', routeName: 'Settings1', title: 'Settings 1'},
-      {nav: 'MainDrawer', routeName: 'Settings1', title: 'Settings 1'},
-    ],
-  },
-  {
-    key: 'Settings',
-    title: 'Settings',
-    routes: [
-      {nav: 'MainDrawer', routeName: 'Settings1', title: 'Settings 1'},
-      {nav: 'MainDrawer', routeName: 'Settings2', title: 'Settings 2'},
-      {nav: 'MainDrawer', routeName: 'Settings1', title: 'Settings 1'},
-      {nav: 'MainDrawer', routeName: 'Settings2', title: 'Settings 2'},
-    ],
-  },
+ 
 ];

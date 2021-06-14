@@ -105,7 +105,7 @@ renderHeader = () => {
 					this.searchFilter(text);
 				}}
 				value={text}
-				placeholder="Search..."
+				placeholder="arama..."
 				style={styles.searchInput}/>
 		</View>
 	)

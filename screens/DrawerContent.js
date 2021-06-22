@@ -23,130 +23,129 @@ export function DrawerContent(props) {
   const {signOut, toggleTheme} = React.useContext(AuthContext);
 
   return (
-    <View style={{flex: 1,backgroundColor:'#fff'}}>
+    <View style={{flex: 1, backgroundColor: '#fff'}}>
       <DrawerContentScrollView {...props}>
         <View style={styles.drawerContent}>
           <View style={styles.userInfoSection}>
             <View style={{flexDirection: 'row', marginTop: 15}}>
-              <Avatar.Image
-            size={90} source={require('../assets/a.png')} />
-           
+              <Avatar.Image size={90} source={require('../assets/a.png')} />
+
               <View style={{marginLeft: 15, flexDirection: 'column'}}>
                 <Title style={styles.title}>Meral Çelik</Title>
                 <Caption style={styles.caption}>@meral</Caption>
               </View>
             </View>
-
-          
-         
           </View>
 
           <Drawer.Section style={styles.drawerSection}>
-            <DrawerItem style={styles.drawerItem}
+            <DrawerItem
+              style={styles.drawerItem}
               icon={({color, size}) => (
-                <Icon name="home-outline"  style={styles.iconColor} />
+                <Icon name="home-outline" style={styles.iconColor} />
               )}
               label="Home"
               onPress={() => {
                 props.navigation.navigate('Home');
               }}
             />
-            <DrawerItem style={styles.drawerItem}
+            <DrawerItem
+              style={styles.drawerItem}
               icon={({color, size}) => (
-                <Icon name="account-outline" style={styles.iconColor}
-                />
+                <Icon name="account-outline" style={styles.iconColor} />
               )}
               label="Profile"
               onPress={() => {
                 props.navigation.navigate('Profile');
               }}
             />
-            <DrawerItem style={styles.drawerItem}
+            <DrawerItem
+              style={styles.drawerItem}
               icon={({color, size}) => (
-                <Icon name="bookmark-outline"  style={styles.iconColor} />
+                <Icon name="bookmark-outline" style={styles.iconColor} />
               )}
               label="Bookmarks"
               onPress={() => {
                 props.navigation.navigate('BookmarkScreen');
               }}
             />
-            <DrawerItem style={styles.drawerItem}
+            <DrawerItem
+              style={styles.drawerItem}
               icon={({color, size}) => (
-                <Icon name="settings-outline"  style={styles.iconColor}/>
+                <Icon name="settings-outline" style={styles.iconColor} />
               )}
               label="Settings"
               onPress={() => {
                 props.navigation.navigate('SettingsScreen');
               }}
             />
-            <DrawerItem style={styles.drawerItem}
+            <DrawerItem
+              style={styles.drawerItem}
               style={styles.item}
               icon={({color, size}) => (
-                <Icon name="account-check-outline"  style={styles.iconColor}/>
+                <Icon name="account-check-outline" style={styles.iconColor} />
               )}
-              label="Support"  
+              label="Support"
               onPress={() => {
                 props.navigation.navigate('SupportScreen');
               }}
-              
             />
-              <DrawerItem style={styles.drawerItem}
+            <DrawerItem
+              style={styles.drawerItem}
               style={styles.item}
               icon={({color, size}) => (
-                <Icon name="account-check-outline"  style={styles.iconColor}/>
+                <Icon name="account-check-outline" style={styles.iconColor} />
               )}
-              label="Support"  
+              label="Support"
               onPress={() => {
                 props.navigation.navigate('SupportScreen');
               }}
-              
             />
-              <DrawerItem style={styles.drawerItem}
+            <DrawerItem
+              style={styles.drawerItem}
               style={styles.item}
               icon={({color, size}) => (
-                <Icon name="account-check-outline"  style={styles.iconColor}/>
+                <Icon name="account-check-outline" style={styles.iconColor} />
               )}
-              label="Support"  
+              label="Support"
               onPress={() => {
                 props.navigation.navigate('SupportScreen');
               }}
-              
             />
-               <DrawerItem style={styles.drawerItem}
+            <DrawerItem
+              style={styles.drawerItem}
               style={styles.item}
               icon={({color, size}) => (
-                <Icon name="account-check-outline"  style={styles.iconColor}/>
+                <Icon name="account-check-outline" style={styles.iconColor} />
               )}
-              label="Support"  
+              label="Support"
               onPress={() => {
                 props.navigation.navigate('SupportScreen');
               }}
-              
             />
-               <DrawerItem style={styles.drawerItem}
+            <DrawerItem
+              style={styles.drawerItem}
               style={styles.item}
               icon={({color, size}) => (
-                <Icon name="account-check-outline"  style={styles.iconColor}/>
+                <Icon name="account-check-outline" style={styles.iconColor} />
               )}
-              label="Support"  
+              label="Support"
               onPress={() => {
                 props.navigation.navigate('SupportScreen');
               }}
-              
             />
-               <DrawerItem style={styles.drawerItem}
+            <DrawerItem
+              style={styles.drawerItem}
               style={styles.item}
               icon={({color, size}) => (
-                <Icon name="account-check-outline"  style={styles.iconColor}/>
+                <Icon name="account-check-outline" style={styles.iconColor} />
               )}
-              label="Support"  
+              label="Support"
               onPress={() => {
                 props.navigation.navigate('SupportScreen');
               }}
-              
             />
           </Drawer.Section>
-          <Drawer.Section >
+          <Drawer.Section>
             <TouchableRipple
               onPress={() => {
                 toggleTheme();
@@ -164,7 +163,7 @@ export function DrawerContent(props) {
       <Drawer.Section style={styles.bottomDrawerSection}>
         <DrawerItem
           icon={({color, size}) => (
-            <Icon name="exit-to-app"  style={styles.iconColor} />
+            <Icon name="exit-to-app" style={styles.iconColor} />
           )}
           label="Sign Out"
           onPress={() => {
@@ -183,9 +182,8 @@ const styles = StyleSheet.create({
   },
   userInfoSection: {
     paddingLeft: 20,
-    
   },
-  drawerItem:{
+  drawerItem: {
     borderBottomColor: '#003f5c',
     borderBottomWidth: 1,
   },
@@ -196,9 +194,8 @@ const styles = StyleSheet.create({
     color: '#003f5c',
   },
   iconColor: {
-    color :'#fb5b5a' ,
+    color: '#fb5b5a',
     fontSize: 25,
-   
   },
   caption: {
     fontSize: 14,
@@ -210,15 +207,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
-  
- 
+
   drawerSection: {
     marginTop: 15,
-    color:'#fff',
+    color: '#fff',
     borderTopColor: '#fb5b5a',
     borderTopWidth: 1,
-   
-
   },
   bottomDrawerSection: {
     marginBottom: 15,
@@ -233,7 +227,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     borderTopColor: '#003f5c',
     borderTopWidth: 1,
-    borderBottomColor:'#003f5c',
+    borderBottomColor: '#003f5c',
     borderBottomWidth: 1,
   },
 });
